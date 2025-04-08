@@ -31,7 +31,6 @@ public class Course {
 
     @Override
     public String toString() {
-        return "Course []";
+        return "Course [id=\" + id + \", name=\" + name + \", author=\" + author + \"]";
     }
-
 }
