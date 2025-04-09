@@ -1,3 +1,5 @@
+(Command in terminal to add data)-> curl -X POST -H "Content-Type: application/json" -d '{"id":4, "name":"Java", "author":"John Doe"}' http://localhost:8080/admin/cources
+
 Jackson is a dependency or a classpath for the default library for JSON maping in Spring Boot.
 
 Entity class- data (entities) of the table are declared within this class.
