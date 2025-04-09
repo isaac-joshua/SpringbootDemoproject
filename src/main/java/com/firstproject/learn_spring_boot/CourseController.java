@@ -2,12 +2,11 @@ package com.firstproject.learn_spring_boot;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
-// import org.springframework.web.bind.annotation.RequestMethod;
-// import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -33,6 +32,8 @@ public class CourseController {
         return courseService.saveCourse(course);
     }
 
+    // (Command in terminal to add data)curl -X POST -H "Content-Type: application/json" -d '{"id":4, "name":"Java", "author":"John Doe"}' http://localhost:8080/admin/cources
+
     //Retrieve Course by id
     @GetMapping("/courses/{id}")
     public Course retrieveCourseById(@PathVariable Long id){
@@ -40,7 +41,7 @@ public class CourseController {
     }
 
     //Delete Course
-    @DeleteMapping
+    @DeleteMapping("/courses/{id}")
     public void deleteCourse(@PathVariable Long id){
         courseService.deleteCourse(id);
     }

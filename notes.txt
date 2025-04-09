@@ -1,0 +1,6 @@
+Jackson is a dependency or a classpath for the default library for JSON maping in Spring Boot.
+
+Entity class- data (entities) of the table are declared within this class.
+
+Controller class is where every method returns a domain object instead of a view.
+it is here where the data is converted into the JSON format.
